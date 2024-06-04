@@ -1,0 +1,13 @@
+calender dax function 
+start date end date (min -start , max-end)
+mycalender = CALENDAR(MIN(Sheet1[Date]),MAX(Sheet1[Date]))
+
+year = YEAR(mycalender[Date])
+
+month = FORMAT(mycalender[Date],"mmmm")
+
+YTD_AVG_PRICE = TOTALYTD([AVG_price],mycalender[Date].[Date]) 
+
+AVG_price = SUM(Sheet1[Price ($)])/COUNT(Sheet1[Car_id])
+
+
